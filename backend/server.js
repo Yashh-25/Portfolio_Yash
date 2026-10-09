@@ -11,9 +11,14 @@ const app = express();
 const PORT = Number(process.env.PORT) || 5000;
 
 // Middleware
+const allowedOrigins = [
+  "http://localhost:5173",
+  process.env.FRONTEND_URL,
+].filter(Boolean);
+
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: allowedOrigins,
   })
 );
 
@@ -111,11 +116,9 @@ async function startServer() {
 
     console.log("MongoDB connected successfully");
 
-    const server = app.listen(PORT, "127.0.0.1", () => {
-      console.log(
-        `Backend listening at http://127.0.0.1:${PORT}`
-      );
-    });
+    const server = app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Backend listening on port ${PORT}`);
+});
 
     server.on("error", (error) => {
       console.error("HTTP server error:", error.message);
