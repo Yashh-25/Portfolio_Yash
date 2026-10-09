@@ -13,11 +13,6 @@ const PORT = Number(process.env.PORT) || 5000;
 // Middleware
 const allowedOrigins = [
   "http://localhost:5173",
-  process.env.FRONTEND_URL,
-].filter(Boolean);
-
-allowedOrigins = [
-  "http://localhost:5173",
   "https://yash-portfolio-ten-delta.vercel.app",
   process.env.FRONTEND_URL,
 ].filter(Boolean);
