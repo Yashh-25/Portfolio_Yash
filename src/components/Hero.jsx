@@ -198,15 +198,7 @@ export default function Hero() {
             </a>
           </div>
 
-          <a
-            href="/Yash_Sharma_Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-6 inline-flex items-center gap-2 text-sm text-slate-600 transition hover:text-purple-700"
-          >
-            <Download size={16} />
-            View Resume
-          </a>
+          
 
           {/* Know About Yash */}
           <div className="mt-8">
