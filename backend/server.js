@@ -16,9 +16,17 @@ const allowedOrigins = [
   process.env.FRONTEND_URL,
 ].filter(Boolean);
 
+allowedOrigins = [
+  "http://localhost:5173",
+  "https://yash-portfolio-ten-delta.vercel.app",
+  process.env.FRONTEND_URL,
+].filter(Boolean);
+
 app.use(
   cors({
     origin: allowedOrigins,
+    methods: ["GET", "POST", "OPTIONS"],
+    allowedHeaders: ["Content-Type"],
   })
 );
 
