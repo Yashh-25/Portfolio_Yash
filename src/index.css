@@ -1,0 +1,19 @@
+@import "tailwindcss";
+body {
+  cursor: none;
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(124, 58, 237, 0.15),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(59, 130, 246, 0.15),
+      transparent 40%
+    ),
+    #f8fafc;
+  font-family: "Inter", sans-serif;
+}
+
+
+
